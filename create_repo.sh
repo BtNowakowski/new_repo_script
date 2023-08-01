@@ -10,7 +10,7 @@ if [ $# != 1 ]; then
 fi
 
 repo_name=$1
-directory=#path to directory where you want to create repo
+directory="<PATH FOR REPOSITORIES>"
 path=$directory/$repo_name
 mkdir $path
 git -C "$path" init 
