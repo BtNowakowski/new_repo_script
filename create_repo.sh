@@ -17,4 +17,7 @@ git -C "$path" init
 git -C "$path" config --global user.email "<YOUR EMAIL>"
 git -C "$path" config --global user.name "<YOUR NAME>"
 cd $path
+touch README.md
+touch .gitignore
+echo $'.pytest_cache\n.vscode\n/source/__pycache__' >> .gitignore
 code .
