@@ -9,9 +9,18 @@ if [ $# != 1 ]; then
 	exit 2;
 fi
 
+
+
+
 repo_name=$1
 directory="<PATH FOR REPOSITORIES>"
 path=$directory/$repo_name
+
+if !(test -d $directory); then
+  echo "Provided directory doesnt exist."
+  exit 2;
+fi
+
 mkdir $path
 git -C "$path" init 
 git -C "$path" config --global user.email "<YOUR EMAIL>"
@@ -19,5 +28,7 @@ git -C "$path" config --global user.name "<YOUR NAME>"
 cd $path
 touch README.md
 touch .gitignore
+touch requirements.txt
 echo $'.pytest_cache\n.vscode\n/source/__pycache__' >> .gitignore
+echo "#$repo_name" >> README.md
 code .
