@@ -6,5 +6,5 @@ Change `<PATH FOR REPOSITORIES>` in the script
 
 Add an alias in your systems terminal eg. new_repo  
 
-then you should be able run the script by just typing `new_repo <NAME_OF_REPOSITORY>`  
+Then you should be able run the script by just typing `new_repo <NAME_OF_REPOSITORY>`  
 
