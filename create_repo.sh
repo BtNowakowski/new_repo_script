@@ -26,6 +26,7 @@ git -C "$path" init
 git -C "$path" config --global user.email "<YOUR EMAIL>"
 git -C "$path" config --global user.name "<YOUR NAME>"
 cd $path
+mkdir source
 touch README.md
 touch .gitignore
 touch requirements.txt
