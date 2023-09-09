@@ -5,7 +5,11 @@ Lastly, script adds all the files to the initial commit then opens up newly crea
 ## Usage
 Change `<PATH FOR REPOSITORIES>`, `<YOUR EMAIL>`, `<YOUR NAME>` placeholders in the script.  
 
-Add an alias in your systems terminal eg. new_repo  
+Add an alias in your system's terminal eg. new_repo  
+On Windows:
+- `set-alias -name new_repo -value C:\Scripts\create_repo.ps1`
+On Mac:
+- `Alias new_repo='~/scripts/create_repo.sh'`
 
 Then you should be able run the script by just typing `new_repo <NAME_OF_REPOSITORY>`  
 
