@@ -34,7 +34,7 @@ Add-Content -Path ".gitignore" -Value ".pytest_cache"
 Add-Content -Path ".gitignore" -Value ".vscode"
 Add-Content -Path ".gitignore" -Value "/source/__pycache__"
 
-Add-Content -Path "README.md" -Value "#$repo_name"
+Add-Content -Path "README.md" -Value "# $repo_name"
 
 # Initialize Git repository and configure user email and name
 git init
