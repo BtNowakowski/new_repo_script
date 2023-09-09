@@ -22,9 +22,6 @@ if !(test -d $directory); then
 fi
 
 mkdir $path
-git -C "$path" init 
-git -C "$path" config --global user.email "<YOUR EMAIL>"
-git -C "$path" config --global user.name "<YOUR NAME>"
 cd $path
 mkdir source
 touch README.md
@@ -32,4 +29,9 @@ touch .gitignore
 touch requirements.txt
 echo $'.pytest_cache\n.vscode\n/source/__pycache__' >> .gitignore
 echo "#$repo_name" >> README.md
+git -C "$path" init 
+git -C "$path" config --global user.email "<YOUR EMAIL>"
+git -C "$path" config --global user.name "<YOUR NAME>"
+git -C "$path" add .
+git -C "$path" commit -m "Initial commit"
 code .
