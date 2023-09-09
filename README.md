@@ -8,6 +8,7 @@ Change `<PATH FOR REPOSITORIES>`, `<YOUR EMAIL>`, `<YOUR NAME>` placeholders in 
 Add an alias in your system's terminal eg. new_repo  
 On Windows:
 - `set-alias -name new_repo -value C:\Scripts\create_repo.ps1`
+  
 On Mac:
 - `Alias new_repo='~/scripts/create_repo.sh'`
 
