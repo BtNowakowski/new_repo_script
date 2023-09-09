@@ -28,7 +28,7 @@ touch README.md
 touch .gitignore
 touch requirements.txt
 echo $'.pytest_cache\n.vscode\n/source/__pycache__' >> .gitignore
-echo "#$repo_name" >> README.md
+echo "# $repo_name" >> README.md
 
 # Creates git repository and commits initial files
 git -C "$path" init 
