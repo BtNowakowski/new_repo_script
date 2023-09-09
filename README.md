@@ -6,6 +6,8 @@ Lastly, script adds all the files to the initial commit then opens up newly crea
 Change `<PATH FOR REPOSITORIES>`, `<YOUR EMAIL>`, `<YOUR NAME>` placeholders in the script.  
 
 Add an alias in your system's terminal eg. new_repo  
+
+  
 On Windows:
 - `New-item -Type file -Path $PROFILE -Force`
 - Open `$Profile`
