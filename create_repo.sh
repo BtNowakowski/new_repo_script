@@ -9,11 +9,11 @@ if [ $# != 1 ]; then
 	exit 2;
 fi
 
-
-
+directory="<PATH FOR REPOSITORIES>"
+name="<YOUR NAME>"
+email="<YOUR EMAIL>"
 
 repo_name=$1
-directory="<PATH FOR REPOSITORIES>"
 path=$directory/$repo_name
 
 if !(test -d $directory); then
@@ -29,9 +29,12 @@ touch .gitignore
 touch requirements.txt
 echo $'.pytest_cache\n.vscode\n/source/__pycache__' >> .gitignore
 echo "#$repo_name" >> README.md
+
+# Creates git repository and commits initial files
 git -C "$path" init 
-git -C "$path" config --global user.email "<YOUR EMAIL>"
-git -C "$path" config --global user.name "<YOUR NAME>"
+git -C "$path" config --global user.email "$email"
+git -C "$path" config --global user.name "$name"
 git -C "$path" add .
 git -C "$path" commit -m "Initial commit"
+
 code .

@@ -13,6 +13,9 @@ if (-not $repo_name) {
 }
 
 $directory = "<PATH FOR REPOSITORIES>"
+$name = "<YOUR NAME>"
+$email = "<YOUR EMAIL>"
+
 $path = Join-Path -Path $directory -ChildPath $repo_name
 
 if (-not (Test-Path $directory -PathType Container)) {
@@ -35,8 +38,8 @@ Add-Content -Path "README.md" -Value "#$repo_name"
 
 # Initialize Git repository and configure user email and name
 git init
-git config user.email "<YOUR EMAIL>"
-git config user.name "<YOUR NAME>"
+git config user.email "$email"
+git config user.name "$name"
 
 # Add all files to the initial commit
 git add .
